@@ -1,0 +1,250 @@
+<!--
+Syllabus Style Kit — BIO 152 theme
+Goal: Reuse this look & structure for other courses without rewriting styles
+Tokens: brand #002147, text #333, lines #d6dbe5, row alt #f3f6fa / #f9fbff
+Font: Calibri, sans-serif
+Why inline styles: Blackboard compatibility
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{COURSE_CODE}} – {{COURSE_TITLE}} Syllabus</title>
+</head>
+<body id="top">
+
+  <!-- Header logo links to top -->
+  <div role="banner" style="margin:0 0 12px;">
+    <a href="#top" aria-label="Back to top">
+      <img src="{{LOGO_URL}}" alt="{{INSTITUTION}} — {{COURSE_CODE}}" style="display:block; max-width:350px; height:auto;">
+    </a>
+  </div>
+
+  <!-- Content wrapper -->
+  <div style="font-family: Calibri, sans-serif; line-height:1.6; color:#333;">
+
+    <!-- Page Title -->
+    <h2 style="color:#002147; border-bottom:2px solid #002147; padding-bottom:6px; margin-bottom:12px;">
+      {{COURSE_CODE}} – {{COURSE_TITLE}} Syllabus
+    </h2>
+
+    <!-- Quick Facts -->
+    <table role="table" style="width:100%; border-collapse:collapse; margin:10px 0 18px;">
+      <tbody>
+        <tr style="background:#f3f6fa;">
+          <td style="padding:10px 12px; border:1px solid #d6dbe5; width:22%; color:#002147;"><strong>Term &amp; Format</strong></td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">{{TERM}} • {{LENGTH}} • {{FORMAT}}</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5; color:#002147;"><strong>Meeting Time</strong></td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">{{DAYS}}, {{TIME}} ({{CAMPUS}})</td>
+        </tr>
+        <tr style="background:#f3f6fa;">
+          <td style="padding:10px 12px; border:1px solid #d6dbe5; color:#002147;"><strong>Credits / Contact Hours</strong></td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">{{CREDITS}} Credits / {{CONTACT_HOURS}} Contact Hours</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Contacts -->
+    <h3 style="color:#002147; margin:16px 0 8px;">Contacts</h3>
+
+    <!-- Instructor card -->
+    <table role="table" style="width:100%; border-collapse:collapse; margin-bottom:18px;">
+      <tbody>
+        <tr style="background:#e7edf7; color:#002147;">
+          <td colspan="2" style="padding:10px 12px; border:1px solid #d6dbe5;"><strong>Instructor: {{INSTRUCTOR_NAME}}</strong></td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5; width:28%; color:#002147;"><strong>Office</strong></td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">{{OFFICE_LOCATION}}</td>
+        </tr>
+        <tr style="background:#f9fbff;">
+          <td style="padding:10px 12px; border:1px solid #d6dbe5; color:#002147;"><strong>Office Hours</strong><br><span style="font-weight:normal;">In-Person · MS Teams · Phone</span></td>
+          <td style="padding:0; border:1px solid #d6dbe5;">
+            <table role="table" style="width:100%; border-collapse:collapse;">
+              <thead>
+                <tr style="background:#f3f6fa; color:#002147;">
+                  <th style="text-align:left; padding:8px 10px; border-bottom:1px solid #d6dbe5;">Day</th>
+                  <th style="text-align:left; padding:8px 10px; border-bottom:1px solid #d6dbe5;">Time(s)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td style="padding:8px 10px; border-bottom:1px solid #eee;">Mon</td><td style="padding:8px 10px; border-bottom:1px solid #eee;">{{MON_HOURS}}</td></tr>
+                <tr><td style="padding:8px 10px; border-bottom:1px solid #eee;">Tue</td><td style="padding:8px 10px; border-bottom:1px solid #eee;">{{TUE_HOURS}}</td></tr>
+                <tr><td style="padding:8px 10px; border-bottom:1px solid #eee;">Thu</td><td style="padding:8px 10px; border-bottom:1px solid #eee;">{{THU_HOURS}}</td></tr>
+              </tbody>
+            </table>
+            <div style="padding:8px 10px; font-size:0.95em;">or as needed.</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5; color:#002147;"><strong>Telephone</strong></td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">{{PHONE}}</td>
+        </tr>
+        <tr style="background:#f9fbff;">
+          <td style="padding:10px 12px; border:1px solid #d6dbe5; color:#002147;"><strong>Email</strong></td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;"><a href="mailto:{{EMAIL}}">{{EMAIL}}</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Other Contacts -->
+    <table role="table" style="width:100%; border-collapse:collapse; margin-bottom:18px;">
+      <thead>
+        <tr style="background:#e7edf7; color:#002147;">
+          <th style="text-align:left; padding:10px 12px; border:1px solid #d6dbe5;">Role</th>
+          <th style="text-align:left; padding:10px 12px; border:1px solid #d6dbe5;">Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Repeat rows as needed; example entries -->
+        <tr>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">Department Chair</td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">{{CHAIR_DETAILS}}</td>
+        </tr>
+        <tr style="background:#f9fbff;">
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">Administrative Assistant</td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">{{ADMIN_DETAILS}}</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">Dean</td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">{{DEAN_DETAILS}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Catalog Description & Materials -->
+    <h3 style="color:#002147; margin:16px 0 8px;">Catalog Description &amp; Materials</h3>
+    <table role="table" style="width:100%; border-collapse:collapse; margin-bottom:18px;">
+      <tbody>
+        <tr style="background:#f3f6fa;">
+          <td style="padding:10px 12px; border:1px solid #d6dbe5; width:22%; color:#002147;"><strong>Catalogue Course Description</strong></td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">{{CATALOG_DESC}}</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5; color:#002147;"><strong>Required Textbook/ISBN</strong></td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">{{TEXTBOOK_INFO}}</td>
+        </tr>
+        <tr style="background:#f3f6fa;">
+          <td style="padding:10px 12px; border:1px solid #d6dbe5; color:#002147;"><strong>General Education Competencies</strong></td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">{{GEN_ED_COMPETENCIES_HTML}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Course Competencies -->
+    <h3 style="color:#002147; margin:16px 0 8px;">Course Competencies</h3>
+    <ol style="margin-top:0; padding-left:20px;">
+      {{COURSE_COMP_LIST_HTML}}
+    </ol>
+
+    <!-- Unit Schedule (Accordion) -->
+    <h3 style="color:#002147; margin:20px 0 8px;">Unit Schedule</h3>
+    <div style="border:1px solid #d6dbe5; border-radius:4px; padding:8px; background:#f9fbff;">
+      {{# For each module, duplicate details block }}
+      <details>
+        <summary style="font-weight:bold; color:#002147; cursor:pointer; margin:6px 0;">{{WEEK_RANGE}} • {{MODULE_TITLE}}</summary>
+        <div style="margin-left:16px; margin-top:6px;">{{MODULE_TEXT_HTML}}</div>
+      </details>
+      {{/ end repeat }}
+    </div>
+
+    <!-- Assessment Overview -->
+    <h3 style="color:#002147; margin:20px 0 8px;">Assessment Overview</h3>
+    <table role="table" style="width:100%; border-collapse:collapse; margin-bottom:10px;">
+      <tbody>
+        <tr style="background:#f3f6fa;">
+          <td style="padding:10px 12px; border:1px solid #d6dbe5; width:24%; color:#002147;"><strong>Grading Breakdown</strong></td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">{{GRADING_BREAKDOWN}}</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5; color:#002147;"><strong>Participation/ Preparedness</strong></td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">{{PARTICIPATION_TEXT}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Use of AI Tools (standalone section; avoids invalid table nesting) -->
+    <h3 style="color:#002147; margin:20px 0 8px;">Use of AI Tools</h3>
+    <div role="note" aria-label="AI Policy" style="border:1px solid #d6dbe5; border-left:4px solid #002147; background:#ffffff; padding:10px 12px; margin:0 0 10px 0;">
+      <p style="margin:0; font-style:italic;">{{AI_POLICY_QUOTE}}</p>
+    </div>
+    <div style="margin:6px 0 12px;">{{AI_POLICY_TEXT_HTML}}</div>
+
+    <!-- Late Policy & Grading Scale -->
+    <h3 style="color:#002147; margin:20px 0 8px;">Policies</h3>
+    <table role="table" style="width:100%; border-collapse:collapse; margin-bottom:18px;">
+      <tbody>
+        <tr style="background:#f3f6fa;">
+          <td style="padding:10px 12px; border:1px solid #d6dbe5; width:24%; color:#002147;"><strong>Late Assignments/Make-up Exam Policy</strong></td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">{{LATE_POLICY_HTML}}</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5; color:#002147;"><strong>Grading Criteria</strong></td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">{{GRADING_SCALE_HTML}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Attendance -->
+    <table role="table" style="width:100%; border-collapse:collapse; margin-bottom:18px;">
+      <tbody>
+        <tr style="background:#f3f6fa;">
+          <td style="padding:10px 12px; border:1px solid #d6dbe5; width:24%; color:#002147;"><strong>Attendance Statement</strong></td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">{{ATTENDANCE_HTML}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Key Policies & Support -->
+    <h3 style="color:#002147; margin:20px 0 8px;">Key Policies &amp; Support</h3>
+    <table role="table" style="width:100%; border-collapse:collapse; margin-bottom:10px;">
+      <tbody>
+        <tr style="background:#f3f6fa;">
+          <td style="padding:10px 12px; border:1px solid #d6dbe5; width:24%; color:#002147;"><strong>Withdraw Policy</strong></td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">{{WITHDRAW_HTML}}</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5; color:#002147;"><strong>Academic Integrity</strong></td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">{{ACADEMIC_INTEGRITY_HTML}}</td>
+        </tr>
+        <tr style="background:#f3f6fa;">
+          <td style="padding:10px 12px; border:1px solid #d6dbe5; color:#002147;"><strong>Accessibility Services</strong></td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">{{ACCESSIBILITY_HTML}}</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5; color:#002147;"><strong>SCC Accessibility Services Coordinator</strong></td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">{{ACCESSIBILITY_COORD_HTML}}</td>
+        </tr>
+        <tr style="background:#f9fbff;">
+          <td style="padding:10px 12px; border:1px solid #d6dbe5; color:#002147;"><strong>Student Academic and Technical Support</strong></td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">{{SUPPORT_HTML}}</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5; color:#002147;"><strong>Discrimination, Harassment, &amp; Sexual Misconduct</strong></td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">{{TITLEIX_HTML}}</td>
+        </tr>
+        <tr style="background:#f9fbff;">
+          <td style="padding:10px 12px; border:1px solid #d6dbe5; color:#002147;"><strong>SNAP</strong></td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">{{SNAP_HTML}}</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5; color:#002147;"><strong>Starfish</strong></td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">{{STARFISH_HTML}}</td>
+        </tr>
+        <tr style="background:#f9fbff;">
+          <td style="padding:10px 12px; border:1px solid #d6dbe5; color:#002147;"><strong>KCTCS/SCC Tobacco Free Policy</strong></td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">{{TOBACCO_HTML}}</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5; color:#002147;"><strong>Operational Flexibility</strong></td>
+          <td style="padding:10px 12px; border:1px solid #d6dbe5;">{{FLEXIBILITY_HTML}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</body>
+</html>
